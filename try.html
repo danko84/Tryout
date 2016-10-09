@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="author" content="Daniel Toth">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="try.css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+			<img src="images/large-v.png" /> <b>VERTO</b> HOMES
+			</div>
+			<div class="menu">
+			<ul>
+				<li><a href="" class="menu">About</a></li>
+				<li><a href="" class="menu">Home Automation</a></li>
+				<li><a href="" class="menu">Latest Homes</a></li>
+				<li><a href="" class="menu">Blog</a></li>
+				<li><a href="" class="menu">Careers</a></li>
+				<li><a href="" class="menu">Press</a></li>
+				<li><a href="" class="menu">Contact</a></li>
+			</ul>
+			</div>
+			<div class="v">
+			<img src="images/large-v.png" />
+			</div>
+		</header>
+		<article class="text">
+			<h1>We are Verto Homes</h1>
+			<h3>We are here to change the world.</h3>
+			<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+			<a href=""><button>Video introduction to Verto Homes</button></a>
+			<table>
+				<tr>
+					<th>£275k</th>
+					<th>81</th>
+					<th>48</th>
+					<th>349</th>
+				</tr>
+				<tr>
+					<td>Total S106 Contribution</td>
+					<td>Homes Under Construction</td>
+					<td>In House Employees</td>
+					<td>Lorem Ipsum Door</td>
+				</tr>
+			</table>
+		</article>
+		<article class="text">
+			<h1>Sustainable Living</h1>
+			<p>We've worked tirelessly to ensure our Zero Carbon Smart Homes are the embodiment of sustainable living. The buildings are designed to conserve energy using state-of-the-art technologies, all fitted with home automation technology to regulate energy usage efficiently, while also simultaneously producing more than enough solar energy to power all of these cutting edge features.</p>
+			<table id="icon">
+				<tr>
+					<td><img src="images/isr.png"><br />Integrate Solar Root</td>
+					<td><img src="images/hp.png"><br />Heat Pump</td>
+					<td><img src="images/evc.png"><br />Electric Vehicle Charging</td>
+				<tr>
+					<td><img src="images/hr.png"><br />Heat Recovery</td>
+					<td><img src="images/em.png"><br />Energy Management</td>
+					<td><img src="images/zhl.png"><br />Zero Heat Loss</td>
+				</tr>
+			</table>
+		</article>
+		<article class="vesta">	
+			<div class="vesta-text">
+				<img src="images/vesta-logo.png">
+				<h1>The future of home automation</h1>
+				<p>You open your eyes in a cosy, tranquil bedroom. You've slept soundly, far from the outside world. Stretching slightly, you get out of bed, pad across the floor to the window and sweep back the curtain.</p>
+				<a href=""><button>Find out more</button></a>
+			</div>
+			
+			<div id="phone">
+				<img src="images/vesta-phone.png">
+			</div>
+		</article>
+		<article class="tw">
+			<div class="towanlogo">
+				<img src="images/towan-logo.png"><br />
+				<p class="towan">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p> 
+			</div>
+			<div class="slideshow">
+			</div>
+		</article>
+		<footer>
+			<div class="firstf">
+				<ul>
+					<li><h4>Contact us</h4></li>
+					<li>Verto Homes</li><br />
+					<li>71 Queen Victoria Street</li><br />
+					<li>London</li><br />
+					<li>EC4V4AY</li>
+				</ul>
+			</div>
+			<div class="secondf">
+				<ul>
+					<h4>&nbsp</h4>
+					<li>Tel: +44(0)2037457374</li><br />
+					<li>Email: <a href="">info@vertohomes.com</a></li><br />
+					<a href=""><li><img src="images/facebook.png">
+					<img src="images/twitter.png">
+					<img src="images/instagram.png"></li></a>
+				</ul>
+			</div>
+				<div class="thirdf">
+					<h4>Latest Post</h4>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<h5><a href="">Read more</a></h5>
+				</div>
+				<div class="fourthf">
+					<img src="images/awards.png">
+					</div>
+			</table>
+				<div class="copy">
+					<p>Copyright &#169 Verto Homes 2015</p>
+				</div>
+		</footer>
+		<script>
+var images=new Array('images/large-house.jpg','images/top-back.jpg','images/vesta-back.jpg');
+var nextimage=0;
+
+doSlideshow();
+
+function doSlideshow()
+{
+    if($('.slideshowimage').length!=0)
+    {
+        $('.slideshowimage').fadeOut(500,function(){slideshowFadeIn();$(this).remove()});
+    }
+    else
+    {
+        slideshowFadeIn();
+    }
+}
+function slideshowFadeIn()
+{
+    $('.slideshow').prepend($('<img class="slideshowimage" src="'+images[nextimage++]+'" style="display:none">').fadeIn(1000,function(){setTimeout(doSlideshow,5000);}));
+    if(nextimage>=images.length)
+        nextimage=0;
+}
+			
+		</script>
+	</body>
+</html>
